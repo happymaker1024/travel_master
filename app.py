@@ -1,7 +1,7 @@
 import sys
 # streamlit 배포할 때 sqlite3 배포 오류가 발생하여 임시 해결 방법, local 실행에서는 필요하지 않음
-# import pysqlite3
-# sys.modules["sqlite3"] = pysqlite3
+import pysqlite3
+sys.modules["sqlite3"] = pysqlite3
 
 import streamlit as st
 from crewai import Crew, Process, Task
